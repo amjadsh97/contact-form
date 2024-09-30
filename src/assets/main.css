@@ -184,7 +184,7 @@ label.radio-label input {
 
 .success-message {
   position: fixed;
-  top: -100px;
+  top: -150px;
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--grey-900);
@@ -203,6 +203,9 @@ label.radio-label input {
 
 .success-message > h2 {
   font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .success-message > p {

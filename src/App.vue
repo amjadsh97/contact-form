@@ -1,6 +1,6 @@
 <script>
 import InputField from './components/InputField.vue';
-
+import successIcon from "./assets/success.svg"
 export default {
   components: { InputField },
   data() {
@@ -65,7 +65,7 @@ export default {
 <template>
   <div class="form-wrapper">
     <div :class="`success-message  ${successMessageVisible ? 'visible':''}`">
-      <h2>Message Sent!</h2>
+      <h2><img src="./assets/success.svg" alt="">Message Sent!</h2>
       <p>Thanks for completing the form. We’ll be in touch soon!</p>
     </div>
     <h1 class="form-title">Contact Us</h1>
