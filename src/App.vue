@@ -33,11 +33,15 @@ export default {
       } else if (!this.isValidEmail(this.userInfo.email)) {
         this.errors.email = "Invalid email format";
       }
-      if (!this.userInfo.queryType) {
+      if (!this.userInfo.queryType || this.userInfo.queryType === "") {
         this.errors.queryType = "Please select a query type";
       }
       if (!this.userInfo.message) {
         this.errors.message = "Message is required";
+      }
+
+      if (Object.keys(this.errors).length > 0) {
+        console.error("Form Errors:", this.errors);
       }
 
       // If no errors, proceed with form submission
@@ -97,6 +101,7 @@ export default {
           label="Query Type"
           type="radio-group"
           required
+          :error="errors.queryType"
           :options="[
         { label: 'General Enquiry', value: 'General Enquiry' },
         { label: 'Support Request', value: 'Support Request' }

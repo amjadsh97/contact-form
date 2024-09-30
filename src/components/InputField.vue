@@ -37,7 +37,7 @@
       </label>
     </div>
 
-
+    <!-- For other input types -->
     <span v-if="error" class="error">{{ error }}</span>
   </div>
 </template>

@@ -238,5 +238,7 @@ label.radio-label.active {
   .success-message {
     min-width: 85vw;
   }
+
+  html {font-size: 58%;}
 }
 
